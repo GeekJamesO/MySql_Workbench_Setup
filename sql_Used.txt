@@ -1,0 +1,6 @@
+use twitter;
+
+select users.first_name as 'First Name', users.last_name as 'Last Name', tweets.tweet as 'Tweet', tweets.created_at as "Date Sent"
+from tweets 
+join users on tweets.user_id = users.id
+where tweets.user_id < 3
